@@ -20,6 +20,6 @@ class ConnectFour
   end
 end
 
-game = ConnectFour.new
+# game = ConnectFour.new
 
-game.print_board
+# game.print_board
