@@ -21,6 +21,10 @@ class ConnectFour
     @board = tmp_board
   end
 
+  def game_over?
+    
+  end
+
   def print_board
     printed = @board.map do |row| 
       row.map { |spot| spot.nil? ? "\u{2B1C}" : spot }
@@ -30,20 +34,3 @@ class ConnectFour
   end
 end
 
-# For test
-game = ConnectFour.new
-game.print_board
-game.update_board(4)
-game.print_board
-game.update_board(3, "\u{24FD} ")
-game.print_board
-game.update_board(2)
-game.print_board
-game.update_board(4, "\u{24FD} ")
-game.print_board
-game.update_board(3)
-game.print_board
-game.update_board(3, "\u{24FD} ")
-game.print_board
-game.update_board(3)
-game.print_board
