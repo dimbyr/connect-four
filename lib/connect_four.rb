@@ -11,7 +11,7 @@ class ConnectFour
     Array.new(6) {Array.new(7)}
   end
   
-  def update_board(col, color = "\u{24FC} ")
+  def update_board(col, color = "\u{2605} ")
     tmp_board = @board
     (0..5).each do |idx|
       current_row = tmp_board[idx]
