@@ -34,3 +34,16 @@ class ConnectFour
   end
 end
 
+
+class Player
+  attr_accessor :ball
+  def initialize(ball)
+    @ball = ball
+  end
+
+  def play(game)
+   puts 'Your turn: 1,...,7'
+   num = gets.chomp.to_i
+   game.update_board(num, ball) 
+  end
+end
