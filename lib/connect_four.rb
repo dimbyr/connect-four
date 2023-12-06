@@ -41,9 +41,19 @@ class Player
     @ball = ball
   end
 
-  def play(game)
+  def play(game, ball = @ball)
+    num = getnum
+    game.update_board(num, ball) 
+  end
+  
+  def getnum
    puts 'Your turn: 1,...,7'
    num = gets.chomp.to_i
-   game.update_board(num, ball) 
+   num
   end
 end
+
+Class Human < Player
+
+  
+  
