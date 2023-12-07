@@ -53,7 +53,13 @@ class Player
   end
 end
 
-Class Human < Player
+class Human < Player
+end
+  
+class Computer < Player
 
-  
-  
+  def getnum
+    rand(1..7)
+  end
+
+end 
