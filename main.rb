@@ -2,12 +2,13 @@
 
 require_relative 'lib/connect_four'
 
-sun =  "\u{2609}"
-moon = "\u{263D}"
+sun =  "\u{1F534}"
+moon = "\u{1F535}"
 game = ConnectFour.new
 human = Human.new(sun)
 comp = Computer.new(moon)
-
-human.play(game)
-comp.play(game)
-game.print_board
+loop do
+  human.play(game)
+  comp.play(game)
+  game.print_board
+end

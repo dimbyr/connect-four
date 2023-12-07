@@ -1,6 +1,7 @@
 # frozen_string_litterals: true
 
 class ConnectFour
+
   attr_accessor :board
 
   def initialize
@@ -22,7 +23,6 @@ class ConnectFour
   end
 
   def game_over?
-    
   end
 
   def print_board
@@ -34,9 +34,9 @@ class ConnectFour
   end
 end
 
-
 class Player
   attr_accessor :ball
+
   def initialize(ball)
     @ball = ball
   end
@@ -45,11 +45,11 @@ class Player
     num = getnum
     game.update_board(num, ball) 
   end
-  
+
   def getnum
    puts 'Your turn: 1,...,7'
    num = gets.chomp.to_i
-   num
+   num - 1
   end
 end
 
@@ -59,7 +59,7 @@ end
 class Computer < Player
 
   def getnum
-    rand(1..7)
+    rand(0..6)
   end
 
 end 
